@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{B6CDF880-7A0D-4CE2-BC37-B296C702313C}</ProjectGuid>
+    <ProjectGuid>{56746BC2-30DE-458D-8BD9-97DE4A310FB1}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ktr_msc_ss1_titouan_taillandier</RootNamespace>
-    <AssemblyName>ktr_msc_ss1_titouan_taillandier</AssemblyName>
+    <RootNamespace>ktr_msc_ss1</RootNamespace>
+    <AssemblyName>ktr_msc_ss1</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Classes\Character.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
