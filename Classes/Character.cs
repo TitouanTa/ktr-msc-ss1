@@ -8,12 +8,12 @@ namespace ktr_msc_ss1.Classes
 {
     class Character
     {
-        protected string _name = "John Terry";
-        protected string _RPGClass = "Mage";
-        protected int _life = 50;
-        protected int _agility = 2;
-        protected int _strength = 2;
-        protected int _wit = 2;
+        string _name;
+        string _RPGClass;
+        int _life;
+        int _agility;
+        int _strength;
+        int _wit;
 
         public Character(string name, string rPGClass, int life, int agility, int strength, int wit)
         {
@@ -28,6 +28,10 @@ namespace ktr_msc_ss1.Classes
         {
 
         }
+        public Character(string name)
+        {
+            this._name = name;
+        }
 
         public string Name { get => _name; set => _name = value; }
         public string RPGClass { get => _RPGClass; set => _RPGClass = value; }
@@ -36,15 +40,41 @@ namespace ktr_msc_ss1.Classes
         public int Strength { get => _strength; set => _strength = value; }
         public int Wit { get => _wit; set => _wit = value; }
 
-        public void Attack(string scream)
+        public void Attack(string weapon)
         {
-            Console.WriteLine(_name);
-            Console.WriteLine(_RPGClass);
-            Console.WriteLine(_life);
-            Console.WriteLine(_agility);
-            Console.WriteLine(_strength);
-            Console.WriteLine(_wit);
-            Console.WriteLine(_name + " : " + scream);
+            
+            if(this._RPGClass == "Warrior")
+            {
+                if (weapon == "hammer" || weapon == "sword")
+                {
+                    Console.WriteLine(_name);
+                    Console.WriteLine(_RPGClass);
+                    Console.WriteLine(_life);
+                    Console.WriteLine(_agility);
+                    Console.WriteLine(_strength);
+                    Console.WriteLine(_wit);
+                    Console.WriteLine("RRRR....");
+                    Console.WriteLine("I'll beat you with my " + weapon);
+                }
+                else Console.WriteLine("I'm not fighting sorry");
+            }
+            if(this._RPGClass == "Mage")
+            {
+                if (weapon == "magic" || weapon == "wand")
+                {
+                    Console.WriteLine(_name);
+                    Console.WriteLine(_RPGClass);
+                    Console.WriteLine(_life);
+                    Console.WriteLine(_agility);
+                    Console.WriteLine(_strength);
+                    Console.WriteLine(_wit);
+                    Console.WriteLine("YAAAAAAAAA....");
+                    Console.WriteLine("Feel the power of my ... " + weapon);
+                }
+                else Console.WriteLine("My magic is not ready, yet");
+            }
+
+
         }
 
     }

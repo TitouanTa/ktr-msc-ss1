@@ -11,8 +11,13 @@ namespace ktr_msc_ss1
     {
         static void Main()
         {
-            Character character = new Character();
-            character.Attack("RRRRrrr ....");
+            //Character mage = new Character("Harry Potter","Mage");
+            //mage.Attack("wand");
+            Warrior warrior = new Warrior("Aragorn");
+            warrior.Attack("sword");
+            Mage mage = new Mage("Harry Potter");
+            mage.Attack("wand");
+            Console.Read();
         }
     }
 }
